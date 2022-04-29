@@ -1,0 +1,80 @@
+/* Buttons  */
+
+input[type="button"] {
+    border: none;
+    background: #555;
+    padding: 10px;
+    color: #fff;
+    width: 100px;
+    border-radius: 10px;
+    font-weight: bold;
+    opacity: 0.9;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+    position: relative;
+    margin: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+input[type="button"].green {
+    background: greenyellow;
+    color: #000;
+}
+
+input[type="button"]:hover {
+    opacity: 1;
+}
+
+input[disabled]:hover {
+    opacity: 1;
+}
+
+/* Dropdown Menu */
+
+.selectBox {
+    position: relative;
+    width: 150px;
+    height: 35px;
+    border-radius: 4px;
+    border: 2px solid #a6b8c4;
+  }
+  .selectBox .select {
+    width: inherit;
+    height: inherit;
+    background: transparent;
+    border: 0 none;
+    outline: 0 none;
+    padding: 0 5px;
+    position: relative;
+    z-index: 3;  /*select가 위로 올라와야 함*/
+    color : #fff;
+  }
+  .selectBox .select option {
+    background: #a6b8c4;
+    color: #fff;
+    padding: 3px 0;
+    font-size: 16px;
+  }
+  .selectBox .icoArrow {
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    z-index: 1; 
+    width: 35px; 
+    height: inherit;
+    border-left: 2px solid #a6b8c4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .selectBox .icoArrow img {
+    width: 50%;
+    transition: .3s; /*부드럽게 회전*/
+  }
+  
+  .selectBox .select:focus + .icoArrow img {
+    transform: rotate(180deg);
+  }
