@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,20 +9,54 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <script src="./js/main.js"></script>
 </head>
+
 <body>
-    <!--제목 부분-->
-    <div id = "high">       
-    
-    </div>
+    <div id="wrap">
+        <header id="header">
+            <h3>삽입정렬&nbsp;
+                <select id="language" onchange="location.href=this.value">
+                    <option value="../kor/Main.html" selected>한글</option>
+                    <option value="../eng/Main.html">English</option>
+                    <option value="../jp/Main.html">日本語</option>
+                    <option value="../ch/Main.html">中文</option>
+                </select>
+            </h3>
+        </header>
 
-    <!-- 알고리즘 실행 부분 -->
-    <div id = "middle">
+        <section id="container">
+            <article class="article1">
+                <div id="c">
+                </div>W
 
+                <div id="a">
+                 
+                    <div id="sliders">
+                        <div class="slider">
+                            <label for="speed">Speed</label>
+                            <input class="slider-input" name="speed  " id="speed" type="range" min="1" max="100" value="51" />
+                            <span class="count" id="speed-count">0</span>
+                        </div>
+        
+                        <div class="slider">
+                            <label for="elements">Elements</label>
+                            <input class="slider-input" name="elements" id="elements" type="range" min="5" max="30" value="5" />
+                            <span class="count" id="element-count">0</span>
+                        </div>
+                    <input type="button" id="sort" class="sort green" value="Sort" />
+                <input type="button" id="stop" value="Stop" disabled />
+                <input type="button" id="reset" class="green" value="Reset" />
+                <input type="button" id="restart" class="green" value="Restart" />
+                <input type="button" id="test" class="green" value="test" />
+                <input type="button" id="test" class="green" value="test" />
+
+                </div>
+                <div id="b">
+                    가나다라마
+                </div>
+            </article>
+            <div style="clear:both;"></div>
+        </section>
     </div>
-    
-    <!-- 하단 버튼 및 설명 부분 -->
-    </div id = "row">
-    
-    </div> 
 </body>
+
 </html>
