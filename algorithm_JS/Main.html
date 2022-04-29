@@ -1,12 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet"  href="./css/main.css">
+    <link rel="stylesheet"  href="./css/interface.css"> 
+    <script src="js/Main.js"></script>
+    <title>고리고리알고리</title>
+
 </head>
 <body>
-    <div>park 테스트입니다. 잉~기모리~</div>
+    <div id="wrap">
+        <header id="header">
+            <h1>고리고리알고리</h1>
+            <div class = "selectBox">
+                <select class="select" onchange="location.href=this.value">
+                    <option value = "../kor/Main.html" selected>한글</option>
+                    <option value = "../eng/Main.html">English</option>
+                    <option value = "../jp/Main.html">日本語</option>
+                    <option value = "../ch/Main.html">中文</option>
+                </select>
+                <span class="icoArrow"><img src="https://freepikpsd.com/media/2019/10/down-arrow-icon-png-7-Transparent-Images.png" alt=""></span>
+            </div>
+        </header>
+
+
+        <div id="buttons">
+                <!-- 버튼 외형은 css로 변경만하면 버튼 종료 -->
+                <a href="#" onclick="location.href='bubbleSorting.html'">
+                <input class="green" type="button" value = "버블 정렬" /></a>
+                <a href="#" onclick="location.href='selectiveSorting.html'">
+                <input class="green" type="button" value = "선택 정렬"/></a>
+                <a href="#" onclick="location.href='heapSorting.html'">
+                <input class="green" type="button" value = "힙 정렬"/></a>
+                <a href="#" onclick="location.href='insertionSorting.html'">
+                <input class="green" type="button" value = "삽입 정렬" /></a>
+                <input class="green" type="button" value ="스택"/>
+                <input class="green" type="button" value ="큐"/>
+        </div>
+
+        <section id="container">
+            <div class="content">
+                <article>
+                    <div class="container">
+                        <!-- 665 350 -->
+                        <!-- <img src="catPunchStop.png" alt = "cat" data-animated="catPunch.gif" data-static="catPunchStop.png" class = "catPunch"> -->
+                        <a href="#" onclick="location.href='bubbleSorting.html'">
+                        <span class="hov-anim-box">
+                            <img src="images/catPunchStop.png" alt="" class="static">
+                            <img src="images/catPunch.gif" alt="" class="animated">
+                        </span>                          
+                        </a>
+                    </div>
+                    <div class = "container">
+                        버블 정렬
+                    </div>
+                </article>
+            </div>
+            <aside id="aside">
+                <!-- 665 350 -->
+                <div class="container">
+                    <!-- 665 350 -->
+                    <!-- <img src="catPunchStop.png" alt = "cat" data-animated="catPunch.gif" data-static="catPunchStop.png" class = "catPunch"> -->
+                    <a href="#" onclick="location.href='selectiveSorting.html'">
+                    <span class="hov-anim-box">
+                        <img src="images/강아지Stop.png" alt="" class="static">
+                        <img src="images/강아지.gif" alt="" class="animated">
+                    </span>                          
+                    </a>
+                </div>
+                <div class = "container">
+                    선택 정렬
+                </div>
+            </aside>
+            <div style="clear:both;"></div>
+        </section>
+        <section id="container">
+            <div class="content">
+                <article>
+                    <div class="container">
+                        <!-- 665 350 -->
+                        <!-- <img src="catPunchStop.png" alt = "cat" data-animated="catPunch.gif" data-static="catPunchStop.png" class = "catPunch"> -->
+                        <a href="#" onclick="location.href='heapSorting.html'">
+                        <span class="hov-anim-box">
+                            <img src="images/고양이냥냥펀치Stop.png" alt="" class="static">
+                            <img src="images/고양이냥냥펀치.gif" alt="" class="animated">
+                        </span>
+                        </a>  
+                    </div>
+                <div class = "container">
+                    힙 정렬
+                </div>
+                </article>
+            </div>
+            <aside id="aside">
+                <!-- 665 350 -->
+                    <!-- <img src="catPunchStop.png" alt = "cat" data-animated="catPunch.gif" data-static="catPunchStop.png" class = "catPunch"> -->
+                    <a href="#" onclick="location.href='insertionSorting.html'">
+                    <span class="hov-anim-box">
+                        <img src="images/강아지 꼬리Stop.png" alt="" class="static">
+                        <img src="images/강아지 꼬리.gif" alt="" class="animated">
+                    </span>
+                    </a>
+                    <div class = "container">
+                        삽입 정렬
+                    </div>
+            </aside>
+            <div style="clear:both;"></div>
+        </section>
+
+        <section id="container">
+            <div class="content">
+                <article>
+                    <div class="container">
+                        <!-- 665 350 -->
+                        <!-- <img src="catPunchStop.png" alt = "cat" data-animated="catPunch.gif" data-static="catPunchStop.png" class = "catPunch"> -->
+                        <a href="#" onclick="location.href='heapSorting.html'">
+                        <span class="hov-anim-box">
+                            <img src="" alt="" class="static">
+                            <img src="" alt="" class="animated">
+                        </span>
+                        </a>  
+                    </div>
+                <div class = "container">
+                    스택
+                </div>
+                </article>
+            </div>
+            <aside id="aside">
+                <!-- 665 350 -->
+                    <!-- <img src="catPunchStop.png" alt = "cat" data-animated="catPunch.gif" data-static="catPunchStop.png" class = "catPunch"> -->
+                    <a href="#" onclick="location.href='insertionSorting.html'">
+                    <span class="hov-anim-box">
+                        <img src="" alt="" class="static">
+                        <img src="" alt="" class="animated">
+                    </span>
+                    </a>
+                    <div class = "container">
+                        큐
+                    </div>
+            </aside>
+            <div style="clear:both;"></div>
+        </section>
+
+        <footer id="footer">
+            담당 교수님 : 임선영 교수님<br>
+            제작자 : 박용빈 김준석 안효준<br>
+            꿈 드림 설계 목적 : 알고리즘을 시각적으로 보여주는 웹<br>
+            5월 7일 용빈이 기사 실기시험<br>
+            4월 24일 안효준 기사 필기 개같이 합격 (항상 아쉬움)<br>
+        </footer>
+    </div>
 </body>
+
 </html>
