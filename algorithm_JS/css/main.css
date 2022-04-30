@@ -1,4 +1,7 @@
 /* 각 요소들을 구분할 수 있게 CSS를 적용 */
+body {
+        margin : 0;
+}
 div#wrap {
         width: 100%;
         background: #000000;
@@ -8,7 +11,7 @@ header#header {
         background: #222222;
         color: #ffffff;
         border-bottom: solid 2px white;
-        
+        text-align: center;
 }
 
 nav#nav {
@@ -36,7 +39,7 @@ footer#footer {
         color: #ffffff;
 }
 
-div#warp,
+div#wrap,
 header#header,
 nav#nav,
 section#container,
@@ -75,9 +78,9 @@ section#container::after {
         clear: both;
 }
 
-@media screen and (max-width: 910px) {
+/* @media screen and (max-width: 910px) {
         div#wrap {
-                width: calc(100% - 20px);
+                width: 100%;
         }
 
         div.content {
@@ -96,7 +99,7 @@ section#container::after {
                 width: calc(100% - 20px);
                 float: none;
         }
-}
+} */
 
 .hov-anim-box .animated {
         display: none

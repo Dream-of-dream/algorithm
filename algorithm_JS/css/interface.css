@@ -39,6 +39,7 @@ input[disabled]:hover {
     height: 35px;
     border-radius: 4px;
     border: 2px solid #a6b8c4;
+    margin-left : auto;
   }
   .selectBox .select {
     width: inherit;
