@@ -1,4 +1,8 @@
 /* 각 요소들을 구분할 수 있게 CSS를 적용 */
+body {
+        margin: 0;
+}
+
 div#wrap {
         width: 100%;
         background: #000000;

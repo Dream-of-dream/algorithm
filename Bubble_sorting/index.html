@@ -8,51 +8,52 @@
     <title>버블 정렬</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <link rel="stylesheet" type="text/css" href="./css/interface.css" />
+    <link rel="stylesheet" type="text/css" href="./css/font.css" />
     <script src="./js/main.js"></script>
 </head>
 
 <body>
     <div id="wrap">
         <header id="header">
-            <h3>삽입정렬&nbsp;
-                <select id="language" onchange="location.href=this.value">
-                    <option value="../kor/Main.html" selected>한글</option>
-                    <option value="../eng/Main.html">English</option>
-                    <option value="../jp/Main.html">日本語</option>
-                    <option value="../ch/Main.html">中文</option>
-                </select>
+            <h3>삽입정렬
+                    <select class="select" onchange="location.href=this.value">
+                        <option value = "../kor/Main.html" selected>한글</option>
+                        <option value = "../eng/Main.html">English</option>
+                        <option value = "../jp/Main.html">日本語</option>
+                        <option value = "../ch/Main.html">中文</option>
+                    </select>
             </h3>
+            
         </header>
 
         <section id="container">
             <article class="article1">
                 
-                <div id="c">
+                <div id="main">
                 </div>
 
-                <div id="a">
+                <div id="main_left">
                     <div id="sliders">
                         <div class="slider">
-                            <label for="speed">Speed</label>
+                            <label for="speed">Speed&nbsp&nbsp&nbsp&nbsp</label>
                             <input class="slider-input" name="speed  " id="speed" type="range" min="1" max="100" value="51" />
                             <span class="count" id="speed-count">0</span>
                         </div>
-        
                         <div class="slider">
                             <label for="elements">Elements</label>
                             <input class="slider-input" name="elements" id="elements" type="range" min="5" max="30" value="5" />
                             <span class="count" id="element-count">0</span>
                         </div>
-                        <input type="button" id="sort" class="sort green" value="Sort" />
-                        <input type="button" id="stop" value="Stop" disabled />
-                        <input type="button" id="reset" class="green" value="Reset" />
-                        <input type="button" id="restart" class="green" value="Restart" />
-                        <input type="button" id="test" class="green" value="test" />
-                        <input type="button" id="test" class="green" value="test" />
+                        <input type="button" id="sort" class="sort green" value="정렬" />
+                        <input type="button" id="stop" value="중지" disabled />
+                        <input type="button" id="reset" class="green" value="초기화" />
+                        <input type="button" id="restart" class="green" value="재시작" />
+                        <input type="button" id="test" class="green" value="오름/내림" />
+                        <input type="button" id="test1" class="green" value="설명" />
                     </div>
                 </div>
 
-                <div id="b">
+                <div id="main_rigt">
                     가나다라마
                 </div>
             </article>
