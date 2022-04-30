@@ -12,6 +12,7 @@ header#header {
         color: #ffffff;
         border-bottom: solid 2px white;
         text-align: center;
+        font-family: 'GmarketSans';
 }
 
 nav#nav {
@@ -26,17 +27,20 @@ div.content {
         background: #2f2f2f;
         color: #ffffff;
         border-radius: 10px;
+        font-family: 'NexonMaplestory';
 }
 
 aside#aside {
         background: #2f2f2f;
         color: #ffffff;
         border-radius: 10px;
+        font-family: 'NexonMaplestory';
 }
 
 footer#footer {
         background: #222222;
         color: #ffffff;
+        font-family: 'NexonMaplestory';
 }
 
 div#wrap,
@@ -76,6 +80,10 @@ section#container::after {
         content: "";
         display: block;
         clear: both;
+}
+div.container {
+        text-align: right;
+        font-size: 18px;
 }
 
 /* @media screen and (max-width: 910px) {
