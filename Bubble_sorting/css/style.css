@@ -4,7 +4,7 @@ body {
 div#wrap {
     width: auto;
     margin: 0 auto;
-    background: #000000;
+    background: #ffffff;
 }
 
 /* 제목부분  */
@@ -15,16 +15,16 @@ header#header {
     font-family: 'GmarketSans';
 }
 
-section#container {
+section#main {
     background: #000000;
-    height: calc(100vh - 118px)
+    width: 98%;
+    height: calc(100vh - 120px);
 }
-
 
 div#warp,
 header#header,
 nav#nav,
-section#container,
+section#main,
 div.content,
 aside#aside,
 /* footer부분 글씨 여백 */
@@ -33,7 +33,7 @@ footer#footer {
 }
 
 .article1{
-    height: 100%;
+    height: 78%;
 }
 
 /* body_ 알고리즘 동작화면, 버튼, 설명칸 */
@@ -67,3 +67,29 @@ footer#footer {
      font-family: 'NexonMaplestory';
      display: table-cell;
  }
+
+ #bars {
+    margin: auto;
+    width: 700px;
+    height: 500px;
+}
+
+.bar {
+    background: green;
+    display: inline-block;
+    border-right: 2px solid #000;
+    margin: 0px;
+    position: relative;
+    bottom: 0px;
+    vertical-align: top;
+    text-align: center;
+    font-weight: bold;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#container {
+    grid-area: container;
+    width: 100%;
+    height: 100%;
+}
