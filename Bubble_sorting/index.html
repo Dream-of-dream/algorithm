@@ -1,15 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>버블 정렬</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link rel="stylesheet" type="text/css" href="./css/interface.css" />
+    <link rel="stylesheet" type="text/css" href="./css/font.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./js/main.js"></script>
 </head>
+
 <body>
+<<<<<<< HEAD
     <div>park 테스트입니다. 잉~기모리~</div>
     ㅅㅂ 속았따.
+=======
+    <div id="wrap">
+        <header id="header">
+            <h3>삽입정렬
+                    <select class="select" onchange="location.href=this.value">
+                        <option value = "../kor/Main.html" selected>한글</option>
+                        <option value = "../eng/Main.html">English</option>
+                        <option value = "../jp/Main.html">日本語</option>
+                        <option value = "../ch/Main.html">中文</option>
+                    </select>
+            </h3>
+            
+        </header>
+
+        <section id="container">
+            <article class="article1">
+                
+                <div id="main">
+                </div>
+
+                <div id="main_left">
+                    <div id="sliders">
+                        <div class="slider">
+                            <label for="speed">Speed&nbsp&nbsp&nbsp&nbsp</label>
+                            <input class="slider-input" name="speed  " id="speed" type="range" min="1" max="100" value="51" />
+                            <span class="count" id="speed-count">0</span>
+                        </div>
+                        <div class="slider">
+                            <label for="elements">Elements</label>
+                            <input class="slider-input" name="elements" id="elements" type="range" min="5" max="30" value="5" />
+                            <span class="count" id="element-count">0</span>
+                        </div>
+                        <input type="button" id="sort" class="sort green" value="정렬" />
+                        <input type="button" id="stop" value="중지" disabled />
+                        <input type="button" id="reset" class="green" value="초기화" />
+                        <input type="button" id="restart" class="green" value="재시작" />
+                        <input type="button" id="test" class="green" value="오름/내림" />
+                        <input type="button" id="test1" class="green" value="설명" />
+                    </div>
+                </div>
+
+                <div id="main_right">
+                    
+                </div>
+            </article>
+            <div style="clear:both;"></div>
+        </section>
+    </div>
+>>>>>>> 8dd183799b8d3d40a21ca19f1be1587dbbf763d2
 </body>
+
 </html>

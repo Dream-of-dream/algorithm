@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+}
+div#wrap {
+    width: auto;
+    margin: 0 auto;
+    background: #000000;
+}
+
+/* 제목부분  */
+header#header {
+    background: #222222;
+    color: #FFFFFF;
+    border-bottom: solid 2px #FFFFFF;
+    font-family: 'GmarketSans';
+}
+
+section#container {
+    background: #000000;
+    height: calc(100vh - 118px)
+}
+
+
+div#warp,
+header#header,
+nav#nav,
+section#container,
+div.content,
+aside#aside,
+/* footer부분 글씨 여백 */
+footer#footer {
+    padding: 10px;
+}
+
+.article1{
+    height: 100%;
+}
+
+/* body_ 알고리즘 동작화면, 버튼, 설명칸 */
+
+/* 알고리즘 동작화면 */
+ #main{
+    width: 100%;
+    height: 70%;
+    background-color: #000000;
+    display: table;
+    border-bottom: solid 2px #FFFFFF;
+}
+
+/* 버튼, 슬라이더 */
+#main_left{
+    height:30%;
+    width: 20%;
+    background-color:#222222;
+    float: left;
+    border-right: solid 2px #FFFFFF;
+    
+ }
+
+/* 설명칸 */
+ #main_right{
+     height: 30%;
+     width: 79.85%;
+     background-color: #222222;
+     float: right;
+     color: #FFFFFF;
+     font-family: 'NexonMaplestory';
+     display: table-cell;
+ }
