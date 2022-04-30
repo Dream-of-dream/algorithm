@@ -51,6 +51,7 @@ input[disabled]:hover {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  /* inherit는 부모 태그에 속성값 그대로 받는다. */
   width: inherit;
   height: inherit;
   background: transparent;
