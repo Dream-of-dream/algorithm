@@ -15,16 +15,16 @@ header#header {
     font-family: 'GmarketSans';
 }
 
-section#container {
+section#container1 {
     background: #000000;
-    height: calc(100vh - 118px)
+    height: calc(100vh - 100px)
 }
 
 
 div#warp,
 header#header,
 nav#nav,
-section#container,
+section#container1,
 div.content,
 aside#aside,
 /* footer부분 글씨 여백 */
@@ -65,5 +65,46 @@ footer#footer {
      float: right;
      color: #FFFFFF;
      font-family: 'NexonMaplestory';
-     display: table-cell;
+     display: flex;
+     align-items: center;
  }
+
+
+ #container {
+    grid-area: container;
+    width: 100%;
+    height: 30%;
+    
+}
+
+#bars {
+    margin: auto;
+    width: 700px;
+    height: 500px;
+}
+
+.bar {
+    background: green;
+    display: inline-block;
+    border-right: 2px solid #000;
+    margin: 0px;
+    position: relative;
+    bottom: 0px;
+    vertical-align: top;
+    text-align: center;
+    font-weight: bold;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        grid-template-areas: "menu" "container" "algo-info";
+        grid-template-rows: 100px 1fr;
+        grid-template-columns: 100vw 1fr;
+    }
+
+    #algo-info {
+        padding: 10px 0px;
+    }
+}
