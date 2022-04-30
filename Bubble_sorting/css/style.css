@@ -65,8 +65,10 @@ footer#footer {
      float: right;
      color: #FFFFFF;
      font-family: 'NexonMaplestory';
-     display: flex;
+     display: table;
      align-items: center;
+     font-size: 20px;   
+     font-weight: 300;
  }
 
 
