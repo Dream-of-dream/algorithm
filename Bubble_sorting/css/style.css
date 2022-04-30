@@ -30,32 +30,31 @@ aside#aside,
 /* footer부분 글씨 여백 */
 footer#footer {
     padding: 10px;
+    color: #fff;
+    width: 100px;
+    border-radius: 10px;
+    font-weight: bold;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+    position: relative;
+    margin: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
 }
 
 .article1{
     height: 78%;
 }
 
-/* body_ 알고리즘 동작화면, 버튼, 설명칸 */
-
-/* 알고리즘 동작화면 */
- #main{
-    width: 100%;
-    height: 70%;
-    background-color: #000000;
-    display: table;
-    border-bottom: solid 2px #FFFFFF;
+input[type="button"]:hover {
+    opacity: 1;
 }
 
-/* 버튼, 슬라이더 */
-#main_left{
-    height:30%;
-    width: 20%;
-    background-color:#222222;
-    float: left;
-    border-right: solid 2px #FFFFFF;
-    
- }
+input[disabled]:hover {
+    opacity: 1;
+}
 
 /* 설명칸 */
  #main_right{
