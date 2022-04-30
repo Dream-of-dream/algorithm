@@ -3,7 +3,6 @@ CURRENT_SET = new Set();
 (function init() {
     updateSpeed();
     updateElements();
-    showDetails();
 })();
 
 // Add bind events on UI elements
@@ -75,13 +74,7 @@ function insertBars(set) {
     }
 }
 
-function showDetails() {
-    const algo = $("select#algorithms")
-        .children("option:selected")
-        .val();
-    $(".algo-container").addClass("hidden");
-    $("#" + algo + "-info").removeClass("hidden");
-}
+
 
 function disableInput(what = true) {
     $(".sort").attr("disabled", what);
@@ -125,9 +118,7 @@ function runAlgo() {
         return;
     }
 
-    const algo = $("select#algorithms")
-        .children("option:selected")
-        .val();
+    const algo = "bubble";
 
     const order = $("select#order")
         .children("option:selected")
@@ -149,8 +140,8 @@ function runAlgo() {
         }
 
         return els;
-    }
-
+    };
+    
     function solve(algo, order, input) {
         switch (algo) {
             case "bubble": {
@@ -176,4 +167,11 @@ function runAlgo() {
             }
         }
     }
+
+    console.log("CONTAINER_WIDTH : " + CONTAINER_WIDTH);
+    console.log("TOTAL_ELEMENTS : " + TOTAL_ELEMENTS);
+    console.log("SPEED : " + SPEED);
+    console.log("container : " + container);
+    console.log("bars : " + bars);
+    console.log("-----------------------------------");
 }
