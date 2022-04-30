@@ -1,44 +1,20 @@
 div#wrap {
     width: auto;
     margin: 0 auto;
-    background: #ddd;
+    background: #000000;
 }
 
 header#header {
-    background: rgb(188, 185, 230);
-}
-
-nav#nav {
-    background: #dfd;
+    background: #222222;
+    color: #FFFFFF;
+    border-bottom: solid 2px #FFFFFF;
 }
 
 section#container {
-    background: #ddf;
+    background: #000000;
     height: calc(100vh - 118px)
 }
 
-section#container2 {
-    background: #a9a9a9;
-}
-
-div.content {
-    background: #eee;
-}
-
-aside#aside {
-    background: #fef;
-}
-
-footer#footer {
-    background: #ffe;
-    width: calc(100% - 20px);
-    height: auto;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    clear: both;
-}
 
 div#warp,
 header#header,
@@ -50,34 +26,6 @@ aside#aside,
 footer#footer {
     padding: 10px;
 }
-
-nav#nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-*/ nav#nav ul li {
-    background: #eee;
-    padding: 10px;
-    display: inline-block;
-}
-
-div.content {
-    width: 30%;
-    height: 40vh;
-    float: left;
-}
-
-aside#aside {
-    width: 67.5%;
-    height: 49%;
-    float: right;
-}
-
-
-/* ---------------------------- */
-
 
 section#container::after {
     content: "";
@@ -123,124 +71,33 @@ section#container::after {
 .article1{
     height: 100%;
 }
+/* 하단 좌측 */
 #a{
     height:30%;
     width: 20%;
-    background-color:#fef;
+    background-color:#222222;
     float: left;
+    border-right: solid 2px #FFFFFF;
+    
  }
 
+/* 하단 우측 */
  #b{
      height: 30%;
-     width: 80%;
-     background-color: #dfd;
-     float: left;
+     width: 79.7%;
+     background-color: #222222;
+     float: right;
+   
  }
+
+ /* 가운데 */
  #c{
      width: 100%;
      height: 70%;
-     background-color: #ffe;
-     display: table;W
- }
-
- .c1{
-     text-align: center;
-    display: table-cell;
-    vertical-align: middle;
+     background-color: #000000;
+     display: table;
+     border-bottom: solid 2px #FFFFFF;
  }
 
 
-/* Buttons */
 
-input[type="button"] {
-    border: none;
-    background: #555;
-    padding: 10px;
-    color: #fff;
-    width: 100px;
-    border-radius: 10px;
-    font-weight: bold;
-    opacity: 0.7;
-    -webkit-transition: 0.2s;
-    transition: opacity 0.2s;
-    position: relative;
-    margin: 5px;
-    display: inline-block;
-    vertical-align: middle;
-    cursor: pointer;
-}
-
-input[type="button"].green {
-    background: greenyellow;
-    color: #000;
-}
-
-input[type="button"]:hover {
-    opacity: 1;
-}
-
-input[disabled]:hover {
-    opacity: 1;
-}
-
-/* Sliddrs */
-
-.slider {
-    display: block;
-    display: flex;
-    align-items: center;
-}
-
-.slider input {
-    -webkit-appearance: none;
-    width: 200px;
-    height: 15px;
-    border-radius: 5px;
-    background: #555;
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: 0.2s;
-    transition: opacity 0.2s;
-}
-
-.slider input#speed {
-    direction: rtl;
-}
-
-.slider input:hover {
-    opacity: 1; /* Fully shown on mouse-over */
-}
-
-.slider input[disabled]:hover {
-    opacity: 0.5;
-}
-
-.slider input::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background: greenyellow;
-    cursor: pointer;
-}
-
-.slider input[disabled]::-webkit-slider-thumb {
-    cursor: not-allowed;
-}
-
-.slider input::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background: #4caf50;
-    cursor: pointer;
-}
-
-span.count {
-    display: inline-block;
-    width: 20px;
-    text-align: left;
-    font-weight: bold;
-    padding: 2px 0px 0px 5px;
-}
