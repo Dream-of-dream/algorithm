@@ -7,11 +7,12 @@ div#wrap {
     background: #000000;
 }
 
+/* 제목부분  */
 header#header {
     background: #222222;
     color: #FFFFFF;
     border-bottom: solid 2px #FFFFFF;
-    font-family: 'AritaBuri';
+    font-family: 'GmarketSans';
 }
 
 section#container {
@@ -63,5 +64,5 @@ footer#footer {
      background-color: #222222;
      float: right;
      color: #FFFFFF;
-   
+     font-family: 'NexonMaplestory';
  }
