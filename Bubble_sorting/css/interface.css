@@ -16,6 +16,7 @@ input[type="button"] {
     display: inline-block;
     vertical-align: middle;
     cursor: pointer;
+    font-family: 'NexonMaplestory';
 }
 
 input[type="button"].green {
@@ -63,6 +64,7 @@ input[disabled]:hover {
     opacity: 0.7;
     -webkit-transition: 0.2s;
     transition: opacity 0.2s;
+    font-family: 'NexonMaplestory';
     
 }
 
@@ -134,6 +136,7 @@ span.count {
     border-radius: 4px;
     border: 2px solid #a6b8c4;
     position: relative;
+    font-family: 'NexonMaplestory';
   }
    .select option {
     background: #a6b8c4;
