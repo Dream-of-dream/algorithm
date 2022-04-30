@@ -9,49 +9,44 @@
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <link rel="stylesheet" type="text/css" href="./css/interface.css" />
     <link rel="stylesheet" type="text/css" href="./css/font.css" />
-    <script src="./js/jquery-3.4.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="./js/main.js"></script>
+    <script src="script/jquery-3.4.1.min.js"></script>
 </head>
+
 <body>
     <div id="wrap">
+        <!-- 제목 부분  -->
         <header id="header">
             <h3>삽입정렬
-                <select class="select" onchange="location.href=this.value">
-                    <option value="../kor/Main.html" selected>한글</option>
-                    <option value="../eng/Main.html">English</option>
-                    <option value="../jp/Main.html">日本語</option>
-                    <option value="../ch/Main.html">中文</option>
-                </select>
+                    <select class="select" onchange="location.href=this.value">
+                        <option value = "../kor/Main.html" selected>한글</option>
+                        <option value = "../eng/Main.html">English</option>
+                        <option value = "../jp/Main.html">日本語</option>
+                        <option value = "../ch/Main.html">中文</option>
+                    </select>
             </h3>
-<<<<<<< HEAD
-
+            
         </header>
 
-        <section id="main">
+        <section id="container1">
             <article class="article1">
-
-                <div id="container">
-                    <div id="bars"></div>
-=======
-        </header>
-        <section id="container">
-            <article class="article1">
+                <!-- 알고리즘 동작 구현 화면 -->
                 <div id="main">
->>>>>>> e8b1a5a10322fda3cddb5de635f0ca9829064798
+                    <div id="container"><div id="bars"></div></div>
                 </div>
+
+                <!-- 버튼, 슬라이더 -->
                 <div id="main_left">
                     <div id="sliders">
                         <div class="slider">
                             <label for="speed">Speed&nbsp&nbsp&nbsp&nbsp</label>
-                            <input class="slider-input" name="speed  " id="speed" type="range" min="1" max="100"
-                                value="51" />
-                            <span class="count" id="speed-count">3</span>
+                            <input class="slider-input" name="speed  " id="speed" type="range" min="1" max="100" value="51" />
+                            <span class="count" id="speed-count">0</span>
                         </div>
                         <div class="slider">
                             <label for="elements">Elements</label>
-                            <input class="slider-input" name="elements" id="elements" type="range" min="5" max="30"
-                                value="5" />
+                            <input class="slider-input" name="elements" id="elements" type="range" min="5" max="30" value="5" />
                             <span class="count" id="element-count">0</span>
                         </div>
                         <input type="button" id="sort" class="sort green" value="정렬" />
@@ -63,14 +58,14 @@
                     </div>
                 </div>
 
+                <!-- 알고리즘 설명 부분 -->
                 <div id="main_right">
-
+                    
                 </div>
             </article>
             <div style="clear:both;"></div>
         </section>
     </div>
-
     <script>
         const CONTAINER_WIDTH = 600;
         let TOTAL_ELEMENTS = document.getElementById("elements").value;
@@ -79,7 +74,6 @@
         let bars = document.getElementsByClassName("bar");
     </script>
 
-    <!-- interface.js include -->
     <script src="script/interface.js"></script>
     <script src="script/animation.js"></script>
     <script src="script/algorithms.js"></script>
