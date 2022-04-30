@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // class Frame {
 //     constructor(e, h) {
 //         this.elements = [];
@@ -70,3 +71,12 @@
 //         return solution;
 //     }
 // }
+=======
+var str = [1, 2, 3]
+
+$(document).ready(function () {
+    $("#test1").click(function () {
+        $("#main_right").html(str[1]);
+    });
+});
+>>>>>>> 8dd183799b8d3d40a21ca19f1be1587dbbf763d2
