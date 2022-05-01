@@ -18,7 +18,7 @@
     <div id="wrap">
         <!-- 제목 부분  -->
         <header id="header">
-            <h3>삽입정렬
+            <h3>버블 정렬
                     <select class="select" onchange="location.href=this.value">
                         <option value = "../kor/Main.html" selected>한글</option>
                         <option value = "../eng/Main.html">English</option>
@@ -51,11 +51,18 @@
                             <input class="slider-input" name="elements" id="elements" type="range" min="5" max="30" value="5" />
                             <span class="count" id="element-count">0</span>
                         </div>
+                        <div id="sort-order">
+                            <label>정렬</label>
+                            <select id="order">
+                                <option value="asc">오름차순</option>
+                                <option value="desc">내림차순</option>
+                            </select>
+                        </div>
                         <input type="button" id="sort" class="sort green" value="정렬" />
                         <input type="button" id="stop" value="중지" disabled />
                         <input type="button" id="reset" class="green" value="초기화" />
                         <input type="button" id="restart" class="green" value="재시작" />
-                        <input type="button" id="asc_desc" class="green" value="오름/내림" />
+                        <!-- <input type="button" id="asc_desc" class="green" value="오름/내림" /> -->
                         <input type="button" id="explain" class="green" value="설명" />
                     </div>
                 </div>
@@ -79,7 +86,7 @@
     <script src="script/interface.js"></script>
     <script src="script/animation.js"></script>
     <script src="script/algorithms.js"></script>
-    <script src="script/testing.js"></script>
+    <!-- <script src="script/testing.js"></script> -->
 </body>
 
 </html>

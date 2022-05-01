@@ -13,6 +13,8 @@ header#header {
     color: #FFFFFF;
     border-bottom: solid 2px #FFFFFF;
     font-family: 'GmarketSans';
+    text-align: center;
+    font-size: 18pt;
 }
 
 section#container1 {
@@ -20,6 +22,11 @@ section#container1 {
     height: calc(100vh - 100px)
 }
 
+/* 정렬 부분 */
+#sort-order{
+    margin-left: 10px;
+    color: #ffffff;
+}
 
 div#warp,
 header#header,
@@ -97,6 +104,10 @@ footer#footer {
     font-weight: bold;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+}
+
+#sort-order {
+    grid-area: sort-order;
 }
 
 @media screen and (max-width: 1000px) {
