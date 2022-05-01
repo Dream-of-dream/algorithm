@@ -18,7 +18,8 @@ header#header {
 
 .select {
     position: relative;
-    left: 47%;
+    left: 44%;
+    top:33px;
 }
 
 section#container1 {
@@ -87,7 +88,7 @@ footer#footer {
 
 #bars {
     margin: auto;
-    width: 700px;
+    width: 1400px;
     height: 500px;
 }
 
