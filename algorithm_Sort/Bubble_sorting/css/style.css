@@ -13,6 +13,12 @@ header#header {
     color: #FFFFFF;
     border-bottom: solid 2px #FFFFFF;
     font-family: 'GmarketSans';
+    text-align: center;
+}
+
+.select {
+    position: relative;
+    left: 47%;
 }
 
 section#container1 {

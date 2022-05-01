@@ -68,7 +68,7 @@ function insertBars(set) {
     for (let i = 0; i < arr.length; ++i) {
         let bar = document.createElement("div");
         bar.setAttribute("class", "bar");
-        bar.setAttribute("style", "width: " + width + "px; height: " + arr[i] + "%;");
+        bar.setAttribute("style", "width: " + width + "px; height: " + (arr[i] + 5) + "%;");
         bar.innerHTML = arr[i];
         container.appendChild(bar);
     }
@@ -117,8 +117,8 @@ function runAlgo() {
         console.log("Abnormal delay.");
         return;
     }
-
-    const algo = "bubble";
+    //각 정렬 홈페이지에서 숨겨진 div태그안에 text가져와서 그에 맞는 알고리즘 초기화
+    const algo = document.getElementById("algo").innerText;
 
     const order = $("select#order")
         .children("option:selected")
