@@ -158,12 +158,9 @@ function runAlgo() {
         console.log("Abnormal delay.");
         return;
     }
-
-    // algo 변수 생성 (현재 무슨 알고리즘인지 가져옴)
-    const algo = "bubble";
-    // const algo = $("select#algorithms")
-    //     .children("option:selected")
-    //     .val();
+    
+    //각 정렬 홈페이지에서 숨겨진 div태그안에 text가져와서 그에 맞는 알고리즘 초기화
+    const algo = document.getElementById("algo").innerText;
 
     // order 변수 생성 (현재 무슨 정렬인지)
     const order = $("select#order")
