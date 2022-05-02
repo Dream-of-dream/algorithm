@@ -19,14 +19,14 @@
     <div id="wrap">
         <!-- 제목 부분  -->
         <header id="header">
-            <h2>버블정렬</h2>
+            <h1>버블정렬
                     <select class="select" onchange="location.href=this.value">
                         <option value = "../kor/Main.html" selected>한글</option>
                         <option value = "../eng/Main.html">English</option>
                         <option value = "../jp/Main.html">日本語</option>
                         <option value = "../ch/Main.html">中文</option>
                     </select>
-            
+                </h1>
             
         </header>
 
@@ -49,7 +49,7 @@
                         <!-- elements -->
                         <div class="slider">
                             <label for="elements">&nbsp&nbsp요소&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
-                            <input class="slider-input" name="elements" id="elements" type="range" min="5" max="30" value="5" />
+                            <input class="slider-input" name="elements" id="elements" type="range" min="10" max="50" value="10" />
                             <span class="count" id="element-count">0</span>
                         </div>
                         <div id="sort-order">
@@ -77,7 +77,7 @@
         </section>
     </div>
     <script>
-        const CONTAINER_WIDTH = 600;
+        const CONTAINER_WIDTH = 1300;
         let TOTAL_ELEMENTS = document.getElementById("elements").value;
         let SPEED = document.getElementById("speed").value;
         let container = document.getElementById("bars");

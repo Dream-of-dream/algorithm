@@ -14,15 +14,13 @@ header#header {
     border-bottom: solid 2px #FFFFFF;
     font-family: 'GmarketSans';
     text-align: center;
-<<<<<<< HEAD:Bubble_sorting/css/style.css
     font-size: 18pt;
-=======
 }
 
 .select {
     position: relative;
-    left: 47%;
->>>>>>> b0f18e0d22cdbc1975d55463ed68af437690c1b3:algorithm_Sort/Bubble_sorting/css/style.css
+    left: 44%;
+    top:33px;
 }
 
 section#container1 {
@@ -96,7 +94,7 @@ footer#footer {
 
 #bars {
     margin: auto;
-    width: 700px;
+    width: 1400px;
     height: 500px;
 }
 
