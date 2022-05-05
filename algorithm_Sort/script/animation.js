@@ -40,10 +40,11 @@ function animate(solution) {
                     if (elem.length) {
                         $(bars[elem[1]]).swap(bars[elem[0]]);
                         $(bars[elem[0]]).addClass("completion");
+                        console.log("elem : ", elem, " highlight : ", highlight);
                     }
 
-            
-                    if(i == (frames.length -1)) {
+                    
+                 if(i == (frames.length -1)) {
                         $(bars).addClass("completion")
                     }
 
