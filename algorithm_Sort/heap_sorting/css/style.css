@@ -122,8 +122,3 @@ footer#footer {
     transition: background-color ease-in 0.1s;
     background: #77c9d4;
 }
-
-/* 색상을 변경하기 위하여 임시로 사용  */
-.completion {
-    background: #FFFFFF;
-}

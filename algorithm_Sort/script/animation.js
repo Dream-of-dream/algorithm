@@ -30,14 +30,20 @@ function animate(solution) {
                     if (highlight.length) {
                         for (h = 0; h < highlight.length; ++h) {
                             $(bars[highlight[h]]).addClass("compared");
+                            
+                        
                         }
                     }
 
+                    // swap : Array에서 두 요소를 바꾸기 위하여 사용 
                     // Swap compared elements
                     if (elem.length) {
                         $(bars[elem[1]]).swap(bars[elem[0]]);
+                        // $(bars[highlight[h]]).addClass("completion");
                     }
 
+                    
+                    // removeclass : 선택된 요소 값의 클래스를 제거 할 수 있다.
                     // Disable stop button once animation ends
                     if (lastFrame) {
                         $("#stop")
