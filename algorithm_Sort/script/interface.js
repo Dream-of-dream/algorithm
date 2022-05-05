@@ -218,10 +218,10 @@ function runAlgo() {
         }
     }
 
-    console.log("CONTAINER_WIDTH : " + CONTAINER_WIDTH);
-    console.log("TOTAL_ELEMENTS : " + TOTAL_ELEMENTS);
-    console.log("SPEED : " + SPEED);
-    console.log("container : " + container);
-    console.log("bars : " + bars);
-    console.log("-----------------------------------");
+    // console.log("CONTAINER_WIDTH : " + CONTAINER_WIDTH);
+    // console.log("TOTAL_ELEMENTS : " + TOTAL_ELEMENTS);
+    // console.log("SPEED : " + SPEED);
+    // console.log("container : " + container);
+    // console.log("bars : " + bars);
+    // console.log("-----------------------------------");
 }
