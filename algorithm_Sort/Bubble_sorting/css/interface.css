@@ -47,6 +47,10 @@ input[disabled]:hover {
     margin-right: 40px;
 }
 
+#create {
+    margin-left: 20px;
+}
+
 /* Sliddrs */
 
 .slider {
