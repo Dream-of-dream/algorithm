@@ -28,13 +28,14 @@ function animate(solution) {
                     const lastFrame = i == frames.length - 1;
                     const elem = frames[i].elements;
                     const highlight = frames[i].highlights;
+                    
+                    console.log("elem : ", elem, " highlight : ", highlight);
 
                     // Highlight compared elements
                     if (highlight.length) {
                         for (h = 0; h < highlight.length; ++h) {
                             $(bars[highlight[h]]).addClass("compared");
                         }
-
                     }
 
                     // swap : Array에서 두 요소를 바꾸기 위하여 사용 
