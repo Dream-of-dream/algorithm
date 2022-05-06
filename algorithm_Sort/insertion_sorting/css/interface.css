@@ -1,0 +1,172 @@
+/* Buttons */
+
+input[type="button"] {
+    border: none;
+    background: #555;
+    padding: 10px;
+    color: #fff;
+    width: 35%;
+    height: 30%;
+    border-radius: 10px;
+    font-weight: bold;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+    position: relative;
+    margin: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    font-family: 'NexonMaplestory';
+    margin-top: 10px;
+}
+
+input[type="button"].green {
+    background: greenyellow;
+    color: #000;
+}
+
+input[type="button"]:hover {
+    opacity: 1;
+}
+
+input[disabled]:hover {
+    opacity: 1;
+}
+
+#sort {
+    margin-left: 20px;
+    margin-right: 40px;
+}
+#reset{
+    margin-left: 20px;
+    margin-right: 40px;
+}
+#asc_desc{
+    margin-left: 20px;
+    margin-right: 40px;
+}
+
+/* Sliddrs */
+
+.slider {
+    display: block;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.slider input {
+    -webkit-appearance: none;
+    width: 200px;
+    height: 15px;
+    border-radius: 5px;
+    background: #555;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+    font-family: 'NexonMaplestory';
+    padding-left: 20px;
+    
+}
+
+.slider input#speed {
+    direction: rtl;
+}
+
+.slider input:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+
+.slider input[disabled]:hover {
+    opacity: 0.5;
+}
+
+.slider input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: greenyellow;
+    cursor: pointer;
+}
+
+.slider input[disabled]::-webkit-slider-thumb {
+    cursor: not-allowed;
+}
+
+.slider input::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4caf50;
+    cursor: pointer;
+    
+}
+
+span.count {
+    display: inline-block;
+    width: 20px;
+    text-align: left;
+    font-weight: bold;
+    padding: 2px 0px 0px 5px;
+    color: #FFFFFF;
+}
+
+
+
+/* Dropdown Menu */
+
+.selectBox {
+    position: relative;
+    width: 150px;
+    height: 35px;
+    border-radius: 4px;
+    border: 2px solid #a6b8c4;
+    
+  }
+   .select {
+    width: inherit;
+    height: inherit;
+    background: transparent;
+    border: 0 none;
+    outline: 0 none;
+    padding: 0 5px;
+    position: relative;
+    z-index: 3;  /*select가 위로 올라와야 함*/
+    color : #fff;
+    /* float: right; */
+    border-radius: 4px;
+    border: 2px solid #a6b8c4;
+    position: relative;
+    font-family: 'NexonMaplestory';
+  }
+   .select option {
+    background: #a6b8c4;
+    color: #fff;
+    padding: 3px 0;
+    font-size: 16px;
+  }
+  .icoArrow {
+    position: absolute; 
+    top: 0; 
+    right: 0; 
+    z-index: 1; 
+    width: 35px; 
+    height: inherit;
+    border-left: 2px solid #a6b8c4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .icoArrow img {
+    width: 50%;
+    transition: .3s; /*부드럽게 회전*/
+  }
+  
+  .select:focus + .icoArrow img {
+    transform: rotate(180deg);
+  }
