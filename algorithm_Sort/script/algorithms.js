@@ -1,9 +1,11 @@
 class Frame {
+    // 인스턴스 객체를 생성하고 초기화 하는 메서드 
     constructor(e, h) {
         this.elements = [];
         this.highlights = [];
         this.information = "";
 
+        // underfind 값이 대입되어 있지 않은 변수 혹은 속성을 사용 하기 위하여 사용 
         if (e != undefined && e.length) {
             this.elements = e;
         }
@@ -19,6 +21,7 @@ class Frame {
         }
     }
 
+    // push : 배열의 끝에 하나 이상의 요소를 추가하기 위하여 사용 
     addElements(elements) {
         for (const e of elements) {
             this.elements.push(e);
