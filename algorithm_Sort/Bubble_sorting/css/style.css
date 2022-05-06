@@ -122,3 +122,7 @@ footer#footer {
     transition: background-color ease-in 0.1s;
     background: #77c9d4;
 }
+
+.completion {
+    background: #DDFFAA;
+}
