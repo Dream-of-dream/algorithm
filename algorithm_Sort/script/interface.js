@@ -9,40 +9,78 @@ CURRENT_SET = new Set();
     updateElements();
 })();
 
+//TODO create 버튼 클릭시 이벤트 발생
+$("#create").on("click", function () {
+    console.log("버튼 클릭");
+    userCreate();
+});
+
 //TODO speed 버튼 클릭시 이벤트 발생
-$("#speed").on("input", function() {
+$("#speed").on("input", function () {
     updateSpeed();
 });
 
 //TODO elements 버튼 클릭시 이벤트 발생
-$("#elements").on("input", function() {
+$("#elements").on("input", function () {
     updateElements();
 });
 
 //TODO algorithms 버튼 클릭시 이벤트 발생
-$("#algorithms").on("change", function() {
+$("#algorithms").on("change", function () {
     showDetails();
 });
 
 //TODO sort 버튼 클릭시 이벤트 발생
-$("#sort").on("click", function() {
+$("#sort").on("click", function () {
     runAlgo();
 });
 
 //TODO stop 버튼 클릭시 이벤트 발생
-$("#stop").on("click", function() {
+$("#stop").on("click", function () {
     stopAnimation();
 });
 
 //TODO reset 버튼 클릭시 이벤트 발생
-$("#reset").on("click", function() {
+$("#reset").on("click", function () {
     reset();
 });
 
 //TODO restart 버튼 클릭시 이벤트 발생
-$("#restart").on("click", function() {
+$("#restart").on("click", function () {
     restart();
 });
+
+function userCreate() {
+    document.getElementById("userOrRandom").innerHTML = "U";
+
+    USER_INPUT = prompt("원하는 숫자들을 ,로 구분하고 입력해주세요", "99,50,15,20,30,70,74,18,97,16,8,87,75");
+    CURRENT_SET = USER_INPUT.split(",");
+    TOTAL_ELEMENTS = CURRENT_SET.length;
+
+    for(var i =0; i<TOTAL_ELEMENTS;i++){
+        if(CURRENT_SET[i] < 5){
+            alert("정수의 값은 5 ~ 100 사이 정수이여야 합니다.")
+            return;
+        }else if(CURRENT_SET[i] > 100){
+            alert("정수의 값은 5 ~ 100 사이 정수이여야 합니다.")
+            return;
+        }
+    }
+    if(TOTAL_ELEMENTS > 50){
+        alert("정수의 개수는 5개 초과 50개 미만이여야 합니다.")
+        return;
+    }else if(TOTAL_ELEMENTS < 5){
+        alert("정수의 개수는 5개 초과 50개 미만이여야 합니다.")
+        return;
+    }
+
+    // container clear
+    clearContainer();
+
+    console.log(CURRENT_SET);
+    // 화면에 bar가 나타나도록 하는 함수 실행 (value로 현재 value의 집합 CURRENT_SET를 넘김)
+    insertBars(CURRENT_SET);
+}
 
 //TODO speed slider 클릭시 이벤트 발생
 function updateSpeed() {
@@ -54,12 +92,14 @@ function updateSpeed() {
 
 //TODO elements slider 클릭시 이벤트 발생
 function updateElements() {
+    document.getElementById("userOrRandom").innerHTML = "R";
     // container clear
     clearContainer();
     // TOTAL_ELEMENTS가 elements value 가져옴
     TOTAL_ELEMENTS = document.getElementById("elements").value;
     // element-count value update(TOTAL_ELEMENTS으로)
     document.getElementById("element-count").innerHTML = TOTAL_ELEMENTS;
+    console.log(TOTAL_ELEMENTS);
     // elements value만큼 random value를 가져옴(CURRENT_SET으로)
     CURRENT_SET = generateRandomSet();
     // 화면에 bar가 나타나도록 하는 함수 실행 (value로 현재 value의 집합 CURRENT_SET를 넘김)
@@ -83,9 +123,11 @@ function clearContainer() {
 
 
 function insertBars(set) {
+    const userOrRandom = document.getElementById("userOrRandom").innerText;
+
     // container 길이 / 요소의 개수 -> 한 요소가 차지하는 가로길이
     const width = CONTAINER_WIDTH / TOTAL_ELEMENTS;
-    console.log("CURRENT_SET : " + set);
+    console.log("userOrRandom : " + userOrRandom);
     // 화면에 나타나는 bar create
     const arr = Array.from(set);
     // elements의 개수만큼 반복
@@ -95,7 +137,11 @@ function insertBars(set) {
         // calss : bar로 설정
         bar.setAttribute("class", "bar");
         // style : 가로,세로 길이(세로 길이는 value에 영향을 받음)
-        bar.setAttribute("style", "width: " + width + "px; height: " + (arr[i] + 5) + "%;");
+        if (userOrRandom === "R") {
+            bar.setAttribute("style", "width: " + width + "px; height: " + (arr[i] + 5) + "%;");
+        } else {
+            bar.setAttribute("style", "width: " + width + "px; height: " + (arr[i]) + "%;");
+        }
         // bar에 표시되는 숫자
         bar.innerHTML = arr[i];
         // container에 부착(container는 화면에 나타나는 layout)
@@ -158,7 +204,7 @@ function runAlgo() {
         console.log("Abnormal delay.");
         return;
     }
-    
+
     //각 정렬 홈페이지에서 숨겨진 div태그안에 text가져와서 그에 맞는 알고리즘 초기화
     const algo = document.getElementById("algo").innerText;
 
@@ -167,14 +213,14 @@ function runAlgo() {
         .children("option:selected")
         .val();
 
-     
+
     // let elements = JSON.parse(JSON.stringify(getElements()));
     let elements = getElements();
     const solution = solve(algo, order, elements);
     console.log("getElements() : " + getElements());
     console.log("JSON.stringify() : " + JSON.stringify(getElements()));
     console.log("JSON.parse(JSON.stringify(getElements())) : " + JSON.parse(JSON.stringify(getElements())));
-    
+
     if (solution) {
         // button, slider의 status 변경
         disableInput();
@@ -190,7 +236,7 @@ function runAlgo() {
         }
         return els;
     };
-    
+
     // 어떤 알고리즘을 선택했는지 확인하는 함수
     function solve(algo, order, input) {
         switch (algo) {
