@@ -5,41 +5,39 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>콤브 정렬</title>
+    <title>壳排序</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <link rel="stylesheet" type="text/css" href="./css/interface.css" />
     <link rel="stylesheet" type="text/css" href="./css/font.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="./js/chineseExplan.js"></script>
     <script src="../script/jquery-3.4.1.min.js"></script>
 </head>
-
- <!--어떤 알고리즘으로 정렬할지 가져오는 부분 -->
-<div id="algo" style="display:none">comb</div>
+<!--어떤 알고리즘으로 정렬할지 가져오는 부분 -->
+<div id="algo" style="display:none">bubble</div>
 <div id="userOrRandom" style="display:none">R</div>
+<div id="language" style="display:none">chinese</div>
 <body>
     <div id="wrap">
         <!-- 제목 부분  -->
         <header id="header">
-            <h1>콤브정렬
-
+            <h1>壳排序
                 <select class="select" onchange="location.href=this.value">
-                    <option value="../../algorithm_JS/Main.html">메인 홈</option>
-                    <option value="../Bubble_sorting/index.html">버블정렬</option>
-                    <option value="../heap_sorting/index.html">힙정렬</option>
-                    <option value="../Selection_sorting/index.html">선택정렬</option>
-                    <option value="../insertion_sorting/index.html">삽입정렬</option>
-                    <option value="../comb_sorting/index.html" selected>콤브정렬</option>
-                    <option value="../shell_sorting/index.html">쉘정렬</option>
+                    <option value="../../algorithm_JS/Main.html">缅因</option>
+                    <option value="../Bubble_sorting/index.html" selected>泡沫排序</option>
+                    <option value="../heap_sorting/index.html">臀对齐</option>
+                    <option value="../Selection_sorting/index.html">选择排序</option>
+                    <option value="../insertion_sorting/index.html">插入排序</option>
+                    <option value="../comb_sorting/index.html">联合对齐</option>
+                    <option value="../shell_sorting/index.html">壳对齐</option>
                 </select>
                 <select class="select" onchange="location.href=this.value">
-                    <option value="../kor/Main.html" selected>한글</option>
-                    <option value="../eng/Main.html">English</option>
-                    <option value="../jp/Main.html">日本語</option>
-                    <option value="../ch/Main.html">中文</option>
+                    <option value="./korean.html">한글</option>
+                    <option value="./english.html">English</option>
+                    <option value="./japenese.html">日本語</option>
+                    <option value="./chinese.html" selected>中文</option>
                 </select>
             </h1>
-
 
         </header>
 
@@ -57,24 +55,25 @@
                     <div id="sliders">
                         <!-- speed -->
                         <div class="slider">
-                            <label for="speed">&nbsp&nbsp속도&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                            <label for="speed">&nbsp&nbsp速度&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
                             <input class="slider-input" name="speed  " id="speed" type="range" min="1" max="100"
                                 value="51" />
                             <span class="count" id="speed-count">0</span>
                         </div>
                         <!-- elements -->
                         <div class="slider">
-                            <label for="elements">&nbsp&nbsp요소&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                            <label for="elements">&nbsp&nbsp要素&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
                             <input class="slider-input" name="elements" id="elements" type="range" min="10" max="50"
                                 value="10" />
                             <span class="count" id="element-count">0</span>
                         </div>
-                        <input type="button" id="sort" class="sort green" value="정렬" />
-                        <input type="button" id="stop" value="중지" disabled />
-                        <input type="button" id="reset" class="green" value="초기화" />
-                        <input type="button" id="restart" class="green" value="재시작" />
-                        <input type="button" id="asc_desc" class="green" value="오름/내림" />
-                        <input type="button" id="explain" class="green" value="설명" />
+                        <input type="button" id="sort" class="sort green" value="排队" />
+                        <input type="button" id="stop" value="中止" disabled />
+                        <input type="button" id="reset" class="green" value="初始化" />
+                        <input type="button" id="restart" class="green" value="重新启动" />
+                        <input type="button" id="asc_desc" class="green" value="升幂/降幂顺序림" />
+                        <input type="button" id="explain" class="green" value="说明" />
+                        <input type="button" id="create" class="green" value="生成" />
                     </div>
                 </div>
 
@@ -88,6 +87,7 @@
     </div>
     <script>
         const CONTAINER_WIDTH = 1300;
+        let USER_INPUT;
         let TOTAL_ELEMENTS = document.getElementById("elements").value;
         let SPEED = document.getElementById("speed").value;
         let container = document.getElementById("bars");

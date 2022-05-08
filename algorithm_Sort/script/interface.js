@@ -53,25 +53,89 @@ $("#restart").on("click", function () {
 function userCreate() {
     document.getElementById("userOrRandom").innerHTML = "U";
 
-    USER_INPUT = prompt("원하는 숫자들을 ,로 구분하고 입력해주세요", "99,50,15,20,30,70,74,18,97,16,8,87,75");
+    const language = document.getElementById("language").innerText;
+
+    if(language === "korean"){
+        USER_INPUT = prompt("원하는 숫자들을 ,로 구분하고 입력해주세요", "99,50,15,20,30,70,74,18,97,16,8,87,75");
+    }else if(language == "english"){
+        USER_INPUT = prompt("Please enter the desired numbers by dividing them into, and", "99,50,15,20,30,70,74,18,97,16,8,87,75");
+    }else if(language == "chinese"){
+        USER_INPUT = prompt("请输入想要的数字(,)。", "99,50,15,20,30,70,74,18,97,16,8,87,75");
+    }else if(language == "japenese"){
+        USER_INPUT = prompt("希望する数字を、に区分して入力してください。", "99,50,15,20,30,70,74,18,97,16,8,87,75");  
+    }else{
+        return;
+    }
     CURRENT_SET = USER_INPUT.split(",");
     TOTAL_ELEMENTS = CURRENT_SET.length;
 
     for(var i =0; i<TOTAL_ELEMENTS;i++){
         if(CURRENT_SET[i] < 5){
-            alert("정수의 값은 5 ~ 100 사이 정수이여야 합니다.")
-            return;
+            if(language === "korean"){
+                alert("정수의 값은 5 ~ 100 사이 정수이여야 합니다.");
+                return;
+            }else if(language === "english"){
+                alert("The value of the integer must be an integer between 5 and 100.");
+                return;
+            }else if(language === "chinese"){
+                alert("定数的值必须是5~100之间的定数");
+                return;
+            }else if(language === "japenese"){
+                alert("整数の値は5~100の間の整数である必要があります。");
+                return;  
+            }else{
+                return;
+            }
         }else if(CURRENT_SET[i] > 100){
-            alert("정수의 값은 5 ~ 100 사이 정수이여야 합니다.")
-            return;
+            if(language === "korean"){
+                alert("정수의 값은 5 ~ 100 사이 정수이여야 합니다.");
+                return;
+            }else if(language === "english"){
+                alert("The value of the integer must be an integer between 5 and 100.");
+                return;
+            }else if(language === "chinese"){
+                alert("定数的值必须是5~100之间的定数");
+                return;
+            }else if(language === "japenese"){
+                alert("整数の値は5~100の間の整数である必要があります。");
+                return;  
+            }else{
+                return;
+            }
         }
     }
     if(TOTAL_ELEMENTS > 50){
-        alert("정수의 개수는 5개 초과 50개 미만이여야 합니다.")
-        return;
+        if(language === "korean"){
+            alert("정수의 개수는 5개 초과 50개 미만이여야 합니다.");
+            return;
+        }else if(language === "english"){
+            alert("The number of integers must be greater than 5 and less than 50.");
+            return;
+        }else if(language === "chinese"){
+            alert("定数的个数必须是5个以上50个以下");
+            return;
+        }else if(language === "japenese"){
+            alert("定数の個数は5個超過50個未満でなければなりません。");  
+            return;
+        }else{
+            return;
+        }
     }else if(TOTAL_ELEMENTS < 5){
-        alert("정수의 개수는 5개 초과 50개 미만이여야 합니다.")
-        return;
+        if(language === "korean"){
+            alert("정수의 개수는 5개 초과 50개 미만이여야 합니다.");
+            return;
+        }else if(language === "english"){
+            alert("The number of integers must be greater than 5 and less than 50.");
+            return;
+        }else if(language === "chinese"){
+            alert("定数的个数必须是5个以上50个以下");
+            return;
+        }else if(language === "japenese"){
+            alert("定数の個数は5個超過50個未満でなければなりません。");  
+            return;
+        }else{
+            return;
+        }
     }
 
     // container clear

@@ -5,38 +5,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>쉘 정렬</title>
+    <title>Shell Sorting</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <link rel="stylesheet" type="text/css" href="./css/interface.css" />
     <link rel="stylesheet" type="text/css" href="./css/font.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="./js/englishExplain.js"></script>
     <script src="../script/jquery-3.4.1.min.js"></script>
 </head>
 
  <!--어떤 알고리즘으로 정렬할지 가져오는 부분 -->
 <div id="algo" style="display:none">shell</div>
-
+<div id="userOrRandom" style="display:none">R</div>
 <body>
     <div id="wrap">
         <!-- 제목 부분  -->
         <header id="header">
 
-            <h1>쉘정렬
+            <h1>Shell Sorting
                 <select class="select" onchange="location.href=this.value">
-                    <option value="../../algorithm_JS/Main.html">메인 홈</option>
-                    <option value="../Bubble_sorting/index.html">버블정렬</option>
-                    <option value="../heap_sorting/index.html">힙정렬</option>
-                    <option value="../Selection_sorting/index.html">선택정렬</option>
-                    <option value="../insertion_sorting/index.html">삽입정렬</option>
-                    <option value="../comb_sorting/index.html">콤브정렬</option>
-                    <option value="../shell_sorting/index.html" selected>쉘정렬</option>
+                    <option value="../../algorithm_JS/Main.html">Main</option>
+                    <option value="../Bubble_sorting/index.html">Bubble Sorting</option>
+                    <option value="../heap_sorting/index.html">Heep Sorting</option>
+                    <option value="../Selection_sorting/index.html">Selection Sorting</option>
+                    <option value="../insertion_sorting/index.html">Insertion Sorting</option>
+                    <option value="../comb_sorting/index.html">Comb Sorting</option>
+                    <option value="../shell_sorting/index.html" selected>Shell Sorting</option>
                 </select>
                 <select class="select" onchange="location.href=this.value">
-                    <option value="../kor/Main.html" selected>한글</option>
-                    <option value="../eng/Main.html">English</option>
-                    <option value="../jp/Main.html">日本語</option>
-                    <option value="../ch/Main.html">中文</option>
+                    <option value="./korean.html">한글</option>
+                    <option value="./english.html" selected>English</option>
+                    <option value="./japenese.html">日本語</option>
+                    <option value="./chinese.html">中文</option>
                 </select>
             </h1>
 
@@ -57,24 +57,24 @@
                     <div id="sliders">
                         <!-- speed -->
                         <div class="slider">
-                            <label for="speed">&nbsp&nbsp속도&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                            <label for="speed">&nbsp&nbspSpeed&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
                             <input class="slider-input" name="speed  " id="speed" type="range" min="1" max="100"
                                 value="51" />
                             <span class="count" id="speed-count">0</span>
                         </div>
                         <!-- elements -->
                         <div class="slider">
-                            <label for="elements">&nbsp&nbsp요소&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                            <label for="elements">&nbsp&nbspElement&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
                             <input class="slider-input" name="elements" id="elements" type="range" min="10" max="50"
                                 value="10" />
                             <span class="count" id="element-count">0</span>
                         </div>
-                        <input type="button" id="sort" class="sort green" value="정렬" />
-                        <input type="button" id="stop" value="중지" disabled />
-                        <input type="button" id="reset" class="green" value="초기화" />
-                        <input type="button" id="restart" class="green" value="재시작" />
-                        <input type="button" id="asc_desc" class="green" value="오름/내림" />
-                        <input type="button" id="explain" class="green" value="설명" />
+                        <input type="button" id="sort" class="sort green" value="Sorting" />
+                        <input type="button" id="stop" value="Stop" disabled />
+                        <input type="button" id="reset" class="green" value="Reset" />
+                        <input type="button" id="restart" class="green" value="ReStart" />
+                        <input type="button" id="asc_desc" class="green" value="Asc/Desc" />
+                        <input type="button" id="explain" class="green" value="Explain" />
                     </div>
                 </div>
 
