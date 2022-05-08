@@ -18,17 +18,22 @@ header#header {
 
 .select {
     position: relative;
-    left: 42%;
+    right: 49%;
     top:33px;   
 }
 .select1 {
     position: relative;
-    left: 36.5%;
+    right: 51%;
     top:33px;  
 }
 .select2 {
     position: relative;
-    left: 40.5%;
+    right: 49.5%;
+    top:33px;  
+}
+.select3 {
+    position: relative;
+    right: 48%;
     top:33px;  
 }
 
