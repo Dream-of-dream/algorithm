@@ -49,11 +49,12 @@ class Algorithms {
         let elements = e;
         let solution = new Animation();
         let swapped = false;
-
+        
         for (let i = 0; i < elements.length; ++i) {
             swapped = false;
             for (let j = 0; j < elements.length - 1; ++j) {
                 solution.addFrame(new Frame([], [j, j + 1]));
+                
 
                 if (order == "desc" ? elements[j] < elements[j + 1] : elements[j] > elements[j + 1]) {
                     swapped = true;
