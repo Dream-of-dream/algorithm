@@ -153,6 +153,28 @@ span.count {
     padding: 3px 0;
     font-size: 16px;
   }
+  .select1 {
+    width: inherit;
+    height: inherit;
+    background: transparent;
+    border: 0 none;
+    outline: 0 none;
+    padding: 0 5px;
+    position: relative;
+    z-index: 3;  /*select가 위로 올라와야 함*/
+    color : #fff;
+    /* float: right; */
+    border-radius: 4px;
+    border: 2px solid #a6b8c4;
+    position: relative;
+    font-family: 'NexonMaplestory';
+  }
+   .select1 option {
+    background: #a6b8c4;
+    color: #fff;
+    padding: 3px 0;
+    font-size: 16px;
+  }
   .icoArrow {
     position: absolute; 
     top: 0; 
@@ -174,3 +196,9 @@ span.count {
   .select:focus + .icoArrow img {
     transform: rotate(180deg);
   }
+  .select1:focus + .icoArrow img {
+    transform: rotate(180deg);
+  }
+  
+
+
