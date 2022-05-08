@@ -19,7 +19,13 @@ header#header {
 .select {
     position: relative;
     left: 42%;
+    top:33px;   
+}
+.select1 {
+    position: relative;
+    left: 36.5%;
     top:33px;
+    
 }
 
 section#container1 {
