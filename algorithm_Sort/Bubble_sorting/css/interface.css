@@ -42,13 +42,50 @@ input[disabled]:hover {
     margin-left: 20px;
     margin-right: 40px;
 }
-#asc_desc{
-    margin-left: 20px;
-    margin-right: 40px;
+#create {
+    margin-left: 40px;
+}
+#explain {
+  margin-left: 20px;
 }
 
-#create {
+input[type="button1"] {
+  border: none;
+  background: #555;
+  padding: 10px;
+  color: #fff;
+  width: 78%;
+  height: 30%;
+  border-radius: 10px;
+  font-weight: bold;
+  opacity: 0.7;ㅈ
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  position: relative;
+  margin: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  font-family: 'NexonMaplestory';
+  margin-top: 10px;
+  text-align: center;
+}
+
+input[type="button1"].green {
+  background: greenyellow;
+  color: #000;
+}
+
+input[type="button1"]:hover {
+  opacity: 1;
+}
+
+input[disabled]:hover {
+  opacity: 1;
+}
+#asc_desc{
     margin-left: 20px;
+    
 }
 
 /* Sliddrs */
@@ -250,6 +287,36 @@ span.count {
     transform: rotate(180deg);
   }
   
-  
+  select {
+    /* algorithm, order 부분 가로길이 정의 */
+    width: 83%;
+    /* algorithm, order 부분 background-color 정의 */
+    background-color: #222;
+    /* algorithm, order 부분 테두리를 둥글게 정의 */
+    border-radius: 10px;
+    /* algorithm, order 부분 세로 길의 정의 */
+    padding: 5px;
+    /* algorithm, order 폰트 정의 */
+    font-family: UbuntuL;
+    font-weight: bold;
+    /* algorithm, order 글자 크기 정의 */
+    font-size: 15px;
+    /* algorithm, order 글자 색깔 정의 */
+    color: #fff;
+    margin-left: 20px;
+    margin-top: 10px;
+    font-family: 'NexonMaplestory';
+    text-align: center;
+}
+
+/* algorithm, order 부분이 Sort Button을 누름으로써 disabled 상태가 되었을 때 정의 */
+select[disabled] {
+    /* algorithm, order(disabled) 상태시 색깔 */
+    color: #fff;
+    /* algorithm, order(disabled) 상태시 투명도 */
+    opacity: 0.5;
+    /* algorithm, order(disabled) 상태시 마우스 오버시 커서 */
+    cursor: not-allowed;
+}
 
 
