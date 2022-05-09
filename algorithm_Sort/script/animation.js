@@ -43,8 +43,8 @@ function animate(solution) {
                     // 요소를 변경 하는 코드, 요소가 변경 됬을 경우 변경된 요소의 색상을 바꿈
                     if (elem.length) {
                         $(bars[elem[1]]).swap(bars[elem[0]]);
-                        $(bars[elem[0]]).addClass("completion");
-                        console.log("elem : ", elem, " highlight : ", highlight);
+                        // $(bars[elem[0]]).addClass("completion");
+                        // console.log("elem : ", elem, " highlight : ", highlight);
                     }
 
                     
