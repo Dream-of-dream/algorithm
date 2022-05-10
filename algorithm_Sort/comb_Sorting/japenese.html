@@ -5,37 +5,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bubble Sorting</title>
+    <title>コンブ整列</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <link rel="stylesheet" type="text/css" href="./css/interface.css" />
     <link rel="stylesheet" type="text/css" href="./css/font.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="./js/englishExplain.js"></script>
+    <script src="./js/japeneseExplain.js"></script>
     <script src="../script/jquery-3.4.1.min.js"></script>
 </head>
 <!--어떤 알고리즘으로 정렬할지 가져오는 부분 -->
 <div id="algo" style="display:none">bubble</div>
 <div id="userOrRandom" style="display:none">R</div>
-<div id="language" style="display:none">english</div>
+<div id="language" style="display:none">japenese</div>
 <body>
     <div id="wrap">
         <!-- 제목 부분  -->
         <header id="header">
-            <h1>Bubble Sorting
-                <select class="select1" onchange="location.href=this.value">
-                    <option value="../../algorithm_JS/Main_eng.html">Main</option>
-                    <option value="../Bubble_Sorting/english.html" selected>Bubble Sorting</option>
-                    <option value="../Heap_Sorting/english.html">Heap Sorting</option>
-                    <option value="../Selection_Sorting/english.html">Selection Sorting</option>
-                    <option value="../Insertion_Sorting/english.html">Insertion Sorting</option>
-                    <option value="../comb_Sorting/english.html">Comb Sorting</option>
-                    <option value="../Shell_Sorting/english.html">Shell Sorting</option>
+            <h1>コンブ整列
+                <select class="select2" onchange="location.href=this.value">
+                    <option value="../../algorithm_JS/Main_jp.html">メーン</option>
+                    <option value="../Bubble_Sorting/japenese.html">バブル整列</option>
+                    <option value="../Heap_Sorting/japenese.html">ヒップ整列</option>
+                    <option value="../Selection_Sorting/japenese.html">選択整列</option>
+                    <option value="../Insertion_Sorting/japenese.html">挿入整列</option>
+                    <option value="../comb_Sorting/japenese.html" selected>コンブ整列</option>
+                    <option value="../Shell_Sorting/japenese.html">シェル整列</option>
                 </select>
-                <select class="select1" onchange="location.href=this.value">
+                <select class="select2" onchange="location.href=this.value">
                     <option value="./korean.html">한글</option>
-                    <option value="./english.html" selected>English</option>
+                    <option value="./english.html">English</option>
                     <option value="./chinese.html">中文</option>
-                    <option value="./japenese.html">日本語</option>
+                    <option value="./japenese.html" selected>日本語</option>
                 </select>
             </h1>
 
@@ -55,35 +55,35 @@
                     <div id="sliders">
                         <!-- speed -->
                         <div class="slider">
-                            <label for="speed">&nbsp&nbsp속도&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                            <label for="speed">&nbsp&nbsp速度&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
                             <input class="slider-input" name="speed  " id="speed" type="range" min="1" max="100"
                                 value="51" />
                             <span class="count" id="speed-count">0</span>
                         </div>
                         <!-- elements -->
                         <div class="slider">
-                            <label for="elements">&nbsp&nbsp요소&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
+                            <label for="elements">&nbsp&nbsp要素&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label>
                             <input class="slider-input" name="elements" id="elements" type="range" min="10" max="50"
                                 value="10" />
                             <span class="count" id="element-count">0</span>
                         </div>
                         <select class="select0" id = "order">
-                            <option value="asc">ascending order</option>
-                            <option value="desc">descending order</option>
+                            <option value="asc">上り順</option>
+                            <option value="desc">下り順</option>
                         </select>
-                        <input type="button" id="sort" class="sort green" value="Sorting" />
-                        <input type="button" id="stop" value="Stop" disabled />
-                        <input type="button" id="reset" class="green" value="Reset" />
-                        <input type="button" id="restart" class="green" value="ReStart" />
-                        <!-- <input type="button" id="asc_desc" class="green" value="Asc/Desc" /> -->
-                        <!-- <input type="button" id="explain" class="green" value="Explain" /> -->
-                        <input type="button" id="create" class="green" value="Create" />
+                        <input type="button" id="sort" class="sort green" value="整列" />
+                        <input type="button" id="stop" value="中止" disabled />
+                        <input type="button" id="reset" class="green" value="初期化" />
+                        <input type="button" id="restart" class="green" value="再スタート" />
+                        <!-- <input type="button" id="asc_desc" class="green" value="上り順/下り順" /> -->
+                        <!-- <input type="button" id="explain" class="green" value="説明" /> -->
+                        <input type="button" id="create" class="green" value="生成" />
                     </div>
                 </div>
 
                 <!-- 알고리즘 설명 부분 -->
                 <div id="main_right">
-                    <b>This is bubble sotring.</b><br>Bubble sort is an algorithm that compares two records adjacent to each other and sorts them interchangeably if the sizes are not in order.<br><br><b>Characteristics of the bubble sort algorithm</b><br>Advantages: Implementation is very simple.<br>Disadvantages: 1. Exchange out-of-order elements with adjacent elements.<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2.In order for one element to move from leftmost to rightmost, it must be exchanged with all other elements in the array.<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp3.In particular, even if a particular element is already in the final alignment position, the exchange occurs.<br><br><b>Time complexity of bubble sort</b><br>Best : O(n^2) , Avg : O(n^2) , Worst : O(n^2)
+                    <b>これはコンブ整列です。</b><br>コンブ整列とは、特定の減少量を通じて差を縮め、互いに隣接した2つのレコードを比較してサイズが順になっていなければ、互いに交換して整列するアルゴリズムです。<br><br><b>コンブ整列アルゴリズムの特徴</b><br>長所:1.バブル整列の息苦しさを解決するために考案された比較的簡単な整列だ。<br>短所:1.stablesortではない<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2。つまりアルゴリズムの順序がいつも同じではないため、安定性が比較的劣ります。<br><br><b>コンブ整列の時間複雑度</b><br>最善 : O(n^2) , 平均 : O(n log n) , 最悪 : O(n^2 / 2^p(pは増加数))
                 </div>
             </article>
             <div style="clear:both;"></div>

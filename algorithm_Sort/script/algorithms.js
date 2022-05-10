@@ -67,7 +67,7 @@ class Algorithms {
                 }
             }
             console.log("bubble");
-            $(bars[elements[elements.length-(i+1)]]).addClass("completion");
+            // $(bars[elements[elements.length-(i+1)]]).addClass("completion");
 
             if (!swapped) {
                 break;

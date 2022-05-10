@@ -67,19 +67,23 @@
                                 value="10" />
                             <span class="count" id="element-count">0</span>
                         </div>
+                        <select class="select0" id = "order">
+                            <option value="asc">上り順</option>
+                            <option value="desc">下り順</option>
+                        </select>
                         <input type="button" id="sort" class="sort green" value="整列" />
                         <input type="button" id="stop" value="中止" disabled />
                         <input type="button" id="reset" class="green" value="初期化" />
                         <input type="button" id="restart" class="green" value="再スタート" />
-                        <input type="button" id="asc_desc" class="green" value="上り順/下り順" />
-                        <input type="button" id="explain" class="green" value="説明" />
+                        <!-- <input type="button" id="asc_desc" class="green" value="上り順/下り順" /> -->
+                        <!-- <input type="button" id="explain" class="green" value="説明" /> -->
                         <input type="button" id="create" class="green" value="生成" />
                     </div>
                 </div>
 
                 <!-- 알고리즘 설명 부분 -->
                 <div id="main_right">
-
+                    <b>これはバブル整列です。</b><br>バブル整列とは、隣接する2つのレコードを比較してサイズが順番になっていなければ交換して整列するアルゴリズムです。<br><br><b>バブル整列アルゴリズムの特徴</b><br>長所:具現が非常に簡単だ<br>短所:1.順序に合わない要素を隣接する要素と交換する。<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2。一つの要素が一番左から一番右に移動するためには、配列ですべての他の要素と交換されなければならない。<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp3。特に特定要素が最終整列位置に既にある場合でも交換されることが起きる。<br><br><b>バブル整列の時間複雑度</b><br>最善 : O(n^2) , 平均 : O(n^2) , 最悪 : O(n^2)
                 </div>
             </article>
             <div style="clear:both;"></div>
