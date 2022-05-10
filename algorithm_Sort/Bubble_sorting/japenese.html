@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="./css/interface.css" />
     <link rel="stylesheet" type="text/css" href="./css/font.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="./js/japeneseExplain.js"></script>
     <script src="../script/jquery-3.4.1.min.js"></script>
 </head>
 <!--어떤 알고리즘으로 정렬할지 가져오는 부분 -->
@@ -23,19 +23,19 @@
         <header id="header">
             <h1>バブル整列
                 <select class="select2" onchange="location.href=this.value">
-                    <option value="../../algorithm_JS/Main.html">メーン</option>
-                    <option value="../Bubble_sorting/index.html" selected>バブル整列</option>
-                    <option value="../heap_sorting/index.html">ヒップ整列</option>
-                    <option value="../Selection_sorting/index.html">選択整列</option>
-                    <option value="../insertion_sorting/index.html">挿入整列</option>
-                    <option value="../comb_sorting/index.html">コンブ整列</option>
-                    <option value="../shell_sorting/index.html">シェル整列</option>
+                    <option value="../../algorithm_JS/Main_jp.html">メーン</option>
+                    <option value="../Bubble_Sorting/japenese.html" selected>バブル整列</option>
+                    <option value="../Heap_Sorting/japenese.html">ヒップ整列</option>
+                    <option value="../Selection_Sorting/japenese.html">選択整列</option>
+                    <option value="../Insertion_Sorting/japenese.html">挿入整列</option>
+                    <option value="../comb_Sorting/japenese.html">コンブ整列</option>
+                    <option value="../Shell_Sorting/japenese.html">シェル整列</option>
                 </select>
                 <select class="select2" onchange="location.href=this.value">
                     <option value="./korean.html">한글</option>
                     <option value="./english.html">English</option>
-                    <option value="./japenese.html"selected>日本語</option>
                     <option value="./chinese.html">中文</option>
+                    <option value="./japenese.html" selected>日本語</option>
                 </select>
             </h1>
 
@@ -67,19 +67,23 @@
                                 value="10" />
                             <span class="count" id="element-count">0</span>
                         </div>
+                        <select class="select0" id = "order">
+                            <option value="asc">上り順</option>
+                            <option value="desc">下り順</option>
+                        </select>
                         <input type="button" id="sort" class="sort green" value="整列" />
                         <input type="button" id="stop" value="中止" disabled />
                         <input type="button" id="reset" class="green" value="初期化" />
                         <input type="button" id="restart" class="green" value="再スタート" />
-                        <input type="button" id="asc_desc" class="green" value="上り順/下り順" />
-                        <input type="button" id="explain" class="green" value="説明" />
+                        <!-- <input type="button" id="asc_desc" class="green" value="上り順/下り順" /> -->
+                        <!-- <input type="button" id="explain" class="green" value="説明" /> -->
                         <input type="button" id="create" class="green" value="生成" />
                     </div>
                 </div>
 
                 <!-- 알고리즘 설명 부분 -->
                 <div id="main_right">
-
+                    <b>これはバブル整列です。</b><br>バブル整列とは、隣接する2つのレコードを比較してサイズが順番になっていなければ交換して整列するアルゴリズムです。<br><br><b>バブル整列アルゴリズムの特徴</b><br>長所:具現が非常に簡単だ<br>短所:1.順序に合わない要素を隣接する要素と交換する。<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2。一つの要素が一番左から一番右に移動するためには、配列ですべての他の要素と交換されなければならない。<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp3。特に特定要素が最終整列位置に既にある場合でも交換されることが起きる。<br><br><b>バブル整列の時間複雑度</b><br>最善 : O(n^2) , 平均 : O(n^2) , 最悪 : O(n^2)
                 </div>
             </article>
             <div style="clear:both;"></div>

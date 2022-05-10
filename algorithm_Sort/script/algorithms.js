@@ -66,6 +66,8 @@ class Algorithms {
                     solution.addFrame(new Frame([j, j + 1], [j, j + 1]));
                 }
             }
+            console.log("bubble");
+            // $(bars[elements[elements.length-(i+1)]]).addClass("completion");
 
             if (!swapped) {
                 break;
@@ -97,6 +99,8 @@ class Algorithms {
                     solution.addFrame(new Frame([i, i + gap], [i, i + gap]));
                 }
             }
+            
+            console.log("comb");
         }
 
         function getNextGap(gap) {

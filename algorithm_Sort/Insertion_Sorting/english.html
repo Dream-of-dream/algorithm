@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bubble Sorting</title>
+    <title>Insertion Sorting</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <link rel="stylesheet" type="text/css" href="./css/interface.css" />
     <link rel="stylesheet" type="text/css" href="./css/font.css" />
@@ -21,13 +21,13 @@
     <div id="wrap">
         <!-- 제목 부분  -->
         <header id="header">
-            <h1>Bubble Sorting
+            <h1>Insertion Sorting
                 <select class="select1" onchange="location.href=this.value">
                     <option value="../../algorithm_JS/Main_eng.html">Main</option>
-                    <option value="../Bubble_Sorting/english.html" selected>Bubble Sorting</option>
+                    <option value="../Bubble_Sorting/english.html">Bubble Sorting</option>
                     <option value="../Heap_Sorting/english.html">Heap Sorting</option>
                     <option value="../Selection_Sorting/english.html">Selection Sorting</option>
-                    <option value="../Insertion_Sorting/english.html">Insertion Sorting</option>
+                    <option value="../Insertion_Sorting/english.html" selected>Insertion Sorting</option>
                     <option value="../comb_Sorting/english.html">Comb Sorting</option>
                     <option value="../Shell_Sorting/english.html">Shell Sorting</option>
                 </select>
@@ -83,7 +83,7 @@
 
                 <!-- 알고리즘 설명 부분 -->
                 <div id="main_right">
-                    <b>This is bubble sotring.</b><br>Bubble sort is an algorithm that compares two records adjacent to each other and sorts them interchangeably if the sizes are not in order.<br><br><b>Characteristics of the bubble sort algorithm</b><br>Advantages: Implementation is very simple.<br>Disadvantages: 1. Exchange out-of-order elements with adjacent elements.<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2.In order for one element to move from leftmost to rightmost, it must be exchanged with all other elements in the array.<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp3.In particular, even if a particular element is already in the final alignment position, the exchange occurs.<br><br><b>Time complexity of bubble sort</b><br>Best : O(n^2) , Avg : O(n^2) , Worst : O(n^2)
+                    <b>这是插入排序 。</b><br>插入排序是指，从第二种资料开始，与前面（前面）的资料进行比较，指定要插入的位置后，将资料向后移动，在指定的位置插入资料进行排序的算法。<br><br><b>插入排序算法的特征</b><br>优点:唱片数量少时，算法本身非常简单，比其他复杂的排序方法更有利。<br>缺点:1.包括比较多的唱片的移动。<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2.唱片数量多、唱片大小大时不合适。<br><br><b>插入排序时间复杂度</b><br>最佳 : O(n), 平均 O(n^2), 最差 : O(n^2)
                 </div>
             </article>
             <div style="clear:both;"></div>
