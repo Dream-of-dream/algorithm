@@ -5,35 +5,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bubble Sorting</title>
+    <title>선택정렬</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <link rel="stylesheet" type="text/css" href="./css/interface.css" />
     <link rel="stylesheet" type="text/css" href="./css/font.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="./js/englishExplain.js"></script>
+    <script src="./js/koreanExplan.js"></script>
     <script src="../script/jquery-3.4.1.min.js"></script>
 </head>
 <!--어떤 알고리즘으로 정렬할지 가져오는 부분 -->
-<div id="algo" style="display:none">bubble</div>
+<div id="algo" style="display:none">selection</div>
 <div id="userOrRandom" style="display:none">R</div>
-<div id="language" style="display:none">english</div>
+<div id="language" style="display:none">korean</div>
+
 <body>
     <div id="wrap">
         <!-- 제목 부분  -->
         <header id="header">
-            <h1>Bubble Sorting
-                <select class="select1" onchange="location.href=this.value">
-                    <option value="../../algorithm_JS/Main_eng.html">Main</option>
-                    <option value="../Bubble_Sorting/english.html" selected>Bubble Sorting</option>
-                    <option value="../Heap_Sorting/english.html">Heap Sorting</option>
-                    <option value="../Selection_Sorting/english.html">Selection Sorting</option>
-                    <option value="../Insertion_Sorting/english.html">Insertion Sorting</option>
-                    <option value="../comb_Sorting/english.html">Comb Sorting</option>
-                    <option value="../Shell_Sorting/english.html">Shell Sorting</option>
+            <h1>선택정렬
+                <select class="select" onchange="location.href=this.value">
+                    <option value="../../algorithm_JS/Main.html">메인 홈</option>
+                    <option value="../Bubble_Sorting/korean.html">버블정렬</option>
+                    <option value="../Heap_Sorting/korean.html">힙정렬</option>
+                    <option value="../Selection_Sorting/korean.html" selected>선택정렬</option>
+                    <option value="../Insertion_Sorting/korean.html">삽입정렬</option>
+                    <option value="../comb_Sorting/korean.html">콤브정렬</option>
+                    <option value="../Shell_Sorting/korean.html">쉘정렬</option>
                 </select>
-                <select class="select1" onchange="location.href=this.value">
-                    <option value="./korean.html">한글</option>
-                    <option value="./english.html" selected>English</option>
+                <select class="select" onchange="location.href=this.value">
+                    <option value="./korean.html" selected>한글</option>
+                    <option value="./english.html">English</option>
                     <option value="./chinese.html">中文</option>
                     <option value="./japenese.html">日本語</option>
                 </select>
@@ -67,23 +68,23 @@
                                 value="10" />
                             <span class="count" id="element-count">0</span>
                         </div>
-                        <select class="select0" id = "order">
-                            <option value="asc">ascending order</option>
-                            <option value="desc">descending order</option>
+                        <!-- <input type="button1" id="asc_desc" class="green" value="오름/내림" /> -->
+                        <select class="select0" id="order">
+                            <option value="asc">오름차순</option>
+                            <option value="desc">내림차순</option>
                         </select>
-                        <input type="button" id="sort" class="sort green" value="Sorting" />
-                        <input type="button" id="stop" value="Stop" disabled />
-                        <input type="button" id="reset" class="green" value="Reset" />
-                        <input type="button" id="restart" class="green" value="ReStart" />
-                        <!-- <input type="button" id="asc_desc" class="green" value="Asc/Desc" /> -->
-                        <!-- <input type="button" id="explain" class="green" value="Explain" /> -->
-                        <input type="button" id="create" class="green" value="Create" />
+                        <input type="button" id="sort" class="sort green" value="정렬" />
+                        <input type="button" id="stop" value="중지" disabled />
+                        <input type="button" id="reset" class="green" value="초기화" />
+                        <input type="button" id="restart" class="green" value="재시작" />
+                        <!-- <input type="button" id="explain" class="green" value="설명" /> -->
+                        <input type="button" id="create" class="green" value="생성" />
                     </div>
                 </div>
 
                 <!-- 알고리즘 설명 부분 -->
                 <div id="main_right">
-                    <b>This is bubble sotring.</b><br>Bubble sort is an algorithm that compares two records adjacent to each other and sorts them interchangeably if the sizes are not in order.<br><br><b>Characteristics of the bubble sort algorithm</b><br>Advantages: Implementation is very simple.<br>Disadvantages: 1. Exchange out-of-order elements with adjacent elements.<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2.In order for one element to move from leftmost to rightmost, it must be exchanged with all other elements in the array.<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp3.In particular, even if a particular element is already in the final alignment position, the exchange occurs.<br><br><b>Time complexity of bubble sort</b><br>Best : O(n^2) , Avg : O(n^2) , Worst : O(n^2)
+                    <b>이것은 선택정렬입니다.</b><br>선택 정렬(selection sort)이란 데이터 배열에서 가장 작은 데이터를 선택하여 앞으로 보내는 정렬입니다.<br><br><b>선택 정렬(selection sort) 알고리즘의 특징</b><br>장점 : 자료 이동 횟수가 미리 결정된다.<br>단점 : 1.안정성을 만족하지 않는다.<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2.즉, 값이 같은 레코드가 있는 경우에 상대적인 위치가 변경될 수 있다.<br><br><b>선택 정렬(selection sort)의 시간복잡도</b><br>최선 : O(n^2) , 평균 : O(n^2) , 최악 : O(n^2)
                 </div>
             </article>
             <div style="clear:both;"></div>

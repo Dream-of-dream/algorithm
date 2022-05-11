@@ -284,7 +284,8 @@ function runAlgo() {
     console.log("getElements() : " + getElements());
     console.log("JSON.stringify() : " + JSON.stringify(getElements()));
     console.log("JSON.parse(JSON.stringify(getElements())) : " + JSON.parse(JSON.stringify(getElements())));
-
+    
+    console.log("solution : " + solution);
     if (solution) {
         // button, slider의 status 변경
         disableInput();

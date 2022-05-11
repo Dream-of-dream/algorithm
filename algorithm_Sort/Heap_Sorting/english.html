@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bubble Sorting</title>
+    <title>Heap Sorting</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <link rel="stylesheet" type="text/css" href="./css/interface.css" />
     <link rel="stylesheet" type="text/css" href="./css/font.css" />
@@ -14,18 +14,18 @@
     <script src="../script/jquery-3.4.1.min.js"></script>
 </head>
 <!--어떤 알고리즘으로 정렬할지 가져오는 부분 -->
-<div id="algo" style="display:none">bubble</div>
+<div id="algo" style="display:none">heap</div>
 <div id="userOrRandom" style="display:none">R</div>
 <div id="language" style="display:none">english</div>
 <body>
     <div id="wrap">
         <!-- 제목 부분  -->
         <header id="header">
-            <h1>Bubble Sorting
+            <h1>Heap Sorting
                 <select class="select1" onchange="location.href=this.value">
                     <option value="../../algorithm_JS/Main_eng.html">Main</option>
-                    <option value="../Bubble_Sorting/english.html" selected>Bubble Sorting</option>
-                    <option value="../Heap_Sorting/english.html">Heap Sorting</option>
+                    <option value="../Bubble_Sorting/english.html">Bubble Sorting</option>
+                    <option value="../Heap_Sorting/english.html" selected>Heap Sorting</option>
                     <option value="../Selection_Sorting/english.html">Selection Sorting</option>
                     <option value="../Insertion_Sorting/english.html">Insertion Sorting</option>
                     <option value="../comb_Sorting/english.html">Comb Sorting</option>
@@ -83,7 +83,7 @@
 
                 <!-- 알고리즘 설명 부분 -->
                 <div id="main_right">
-                    <b>This is bubble sotring.</b><br>Bubble sort is an algorithm that compares two records adjacent to each other and sorts them interchangeably if the sizes are not in order.<br><br><b>Characteristics of the bubble sort algorithm</b><br>Advantages: Implementation is very simple.<br>Disadvantages: 1. Exchange out-of-order elements with adjacent elements.<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2.In order for one element to move from leftmost to rightmost, it must be exchanged with all other elements in the array.<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp3.In particular, even if a particular element is already in the final alignment position, the exchange occurs.<br><br><b>Time complexity of bubble sort</b><br>Best : O(n^2) , Avg : O(n^2) , Worst : O(n^2)
+                    <b>This is hip alignment.</b><br>Hip sorting is the sort that makes up the maximum heap tree.<br><br><b>Features of Heap Alignment Algorithm</b><br>Advantages: 1. Good time complexity.<br>Disadvantage: 1. O(nlog) time complexity is a little slow depending on the state of the data.<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2. Unstable alignment.<br><br><b>Time Complexity of Heap Alignment</b><br>Best : O(nlogn) , Average : O(nlogn) , Worst : O(nlogn))
                 </div>
             </article>
             <div style="clear:both;"></div>

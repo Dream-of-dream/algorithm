@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>壳排序</title>
+    <title>插入排序</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <link rel="stylesheet" type="text/css" href="./css/interface.css" />
     <link rel="stylesheet" type="text/css" href="./css/font.css" />
@@ -14,20 +14,20 @@
     <script src="../script/jquery-3.4.1.min.js"></script>
 </head>
 <!--어떤 알고리즘으로 정렬할지 가져오는 부분 -->
-<div id="algo" style="display:none">bubble</div>
+<div id="algo" style="display:none">insertion</div>
 <div id="userOrRandom" style="display:none">R</div>
 <div id="language" style="display:none">chinese</div>
 <body>
     <div id="wrap">
         <!-- 제목 부분  -->
         <header id="header">
-            <h1>壳排序
+            <h1>插入排序
                 <select class="select3" onchange="location.href=this.value">
                     <option value="../../algorithm_JS/Main_ch.html">缅因</option>
-                    <option value="../Bubble_Sorting/chinese.html" selected>泡沫排序</option>
+                    <option value="../Bubble_Sorting/chinese.html">泡沫排序</option>
                     <option value="../Heap_Sorting/chinese.html">臀对齐</option>
                     <option value="../Selection_Sorting/chinese.html">选择排序</option>
-                    <option value="../Insertion_Sorting/chinese.html">插入排序</option>
+                    <option value="../Insertion_Sorting/chinese.html" selected>插入排序</option>
                     <option value="../comb_Sorting/chinese.html">联合对齐</option>
                     <option value="../Shell_Sorting/chinese.html">壳对齐</option>
                 </select>
@@ -83,7 +83,7 @@
 
                 <!-- 알고리즘 설명 부분 -->
                 <div id="main_right">
-                    <b>这是泡沫排序。</b><br>泡沫排序是指比较两个相邻的唱片,如果大小不按顺序排列,就相互交换排列的算法。<br><br><b>气泡排序算法的特征</b><br>优点:体现非常简单<br>缺点:1.将不符合顺序的要素与相邻要素进行交换。<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2.为了使一个要素从最左到最右移动，需要在排列中与所有其他要素进行交换。<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp3.特别是即使特定要素已经处于最终排序位置，也会发生交换的情况。<br><br><b>气泡排列的时间复杂度</b><br>最佳 : O(n^2) , 平均 : O(n^2) , 最差 : O(n^2)
+                    <b>这是插入排序 。</b><br>插入排序是指，从第二种资料开始，与前面（前面）的资料进行比较，指定要插入的位置后，将资料向后移动，在指定的位置插入资料进行排序的算法。<br><br><b>插入排序算法的特征</b><br>优点:唱片数量少时，算法本身非常简单，比其他复杂的排序方法更有利。<br>缺点:1.包括比较多的唱片的移动。<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2.唱片数量多、唱片大小大时不合适。<br><br><b>插入排序时间复杂度</b><br>最佳 : O(n), 平均 O(n^2), 最差 : O(n^2)
                 </div>
             </article>
             <div style="clear:both;"></div>

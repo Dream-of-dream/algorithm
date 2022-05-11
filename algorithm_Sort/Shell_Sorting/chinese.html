@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>壳排序</title>
+    <title>壳对齐</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
     <link rel="stylesheet" type="text/css" href="./css/interface.css" />
     <link rel="stylesheet" type="text/css" href="./css/font.css" />
@@ -14,22 +14,22 @@
     <script src="../script/jquery-3.4.1.min.js"></script>
 </head>
 <!--어떤 알고리즘으로 정렬할지 가져오는 부분 -->
-<div id="algo" style="display:none">bubble</div>
+<div id="algo" style="display:none">shell</div>
 <div id="userOrRandom" style="display:none">R</div>
 <div id="language" style="display:none">chinese</div>
 <body>
     <div id="wrap">
         <!-- 제목 부분  -->
         <header id="header">
-            <h1>壳排序
+            <h1>壳对齐
                 <select class="select3" onchange="location.href=this.value">
                     <option value="../../algorithm_JS/Main_ch.html">缅因</option>
-                    <option value="../Bubble_Sorting/chinese.html" selected>泡沫排序</option>
+                    <option value="../Bubble_Sorting/chinese.html">泡沫排序</option>
                     <option value="../Heap_Sorting/chinese.html">臀对齐</option>
                     <option value="../Selection_Sorting/chinese.html">选择排序</option>
                     <option value="../Insertion_Sorting/chinese.html">插入排序</option>
                     <option value="../comb_Sorting/chinese.html">联合对齐</option>
-                    <option value="../Shell_Sorting/chinese.html">壳对齐</option>
+                    <option value="../Shell_Sorting/chinese.html" selected>壳对齐</option>
                 </select>
                 <select class="select3" onchange="location.href=this.value">
                     <option value="./korean.html">한글</option>
@@ -83,7 +83,7 @@
 
                 <!-- 알고리즘 설명 부분 -->
                 <div id="main_right">
-                    <b>这是泡沫排序。</b><br>泡沫排序是指比较两个相邻的唱片,如果大小不按顺序排列,就相互交换排列的算法。<br><br><b>气泡排序算法的特征</b><br>优点:体现非常简单<br>缺点:1.将不符合顺序的要素与相邻要素进行交换。<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2.为了使一个要素从最左到最右移动，需要在排列中与所有其他要素进行交换。<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp3.特别是即使特定要素已经处于最终排序位置，也会发生交换的情况。<br><br><b>气泡排列的时间复杂度</b><br>最佳 : O(n^2) , 平均 : O(n^2) , 最差 : O(n^2)
+                    <b>这是壳对齐.</b><br>所谓壳体排列,是指提取应排列的列表中的各k号要素,制作部分列表。 这个k叫间距 每次旋转时. 间隔k缩小一半. 直到间隔k变为1为止. 反复排列。<br><br><b>壳排序算法的特征</b><br>优点 : 在不连续的部分列表中，如果发生资料交换，就会移动更大的距离。<br>缺点 : 如果插入位置偏远，则需要东海的次数增多。<br><br><br><b>壳对齐时间复杂度</b><br>最好 : O(n) , 平均 : O(n^1.5) , 最坏 : O(n^2)
                 </div>
             </article>
             <div style="clear:both;"></div>
