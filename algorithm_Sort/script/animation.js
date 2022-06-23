@@ -22,6 +22,7 @@ function animate(solution) {
 
         (function (frames, i, bars, ANIMATION_FRAMES, SPEED, TOTAL_ELEMENTS) {
             //요소 개수에 따라서 속도 달라지는 부분
+
             if (TOTAL_ELEMENTS <= 15) {
                 ANIMATION_FRAMES.push(
                     setTimeout(function () {
@@ -62,6 +63,7 @@ function animate(solution) {
                         }
                     }, SPEED * TOTAL_ELEMENTS * i)
                 );
+
             }
             else if (TOTAL_ELEMENTS <= 25) {
                 ANIMATION_FRAMES.push(
